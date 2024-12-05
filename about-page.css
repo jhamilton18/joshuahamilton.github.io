@@ -1,0 +1,191 @@
+/* about-page.css */
+
+/* Specific About Page Header */
+.about-header {
+    min-height: 40vh;
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%),
+                url('path/to/subtle-pattern.png');
+    background-blend-mode: overlay;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.about-header .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.about-header .section-description {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* About Profile Section */
+.about-profile-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20x;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-profile-image {
+    float: left;
+    margin-right: 20px; /* Adds space between the image and the text */
+    width: 200px; /* Adjust the width as needed */
+    height: auto;
+    border-radius: 50%; /* Optional: makes the image round */
+}
+
+.about-profile-image:hover {
+    transform: translateY(-10px);
+}
+
+.about-profile-text {
+    flex: 1; /* Ensures the text takes the remaining space */
+    line-height: 1.6; /* Improves readability by spacing out the text */
+}
+
+
+
+.about-profile-text p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Skills Section */
+.about-skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    padding: 4rem 2rem;
+    background: #f8f9fa;
+}
+
+.about-skill-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+.skill-progress {
+    height: 6px;
+    background: #e9ecef;
+    border-radius: 3px;
+    margin-top: 0.5rem;
+    overflow: hidden;
+}
+
+.skill-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #3498db, #2c3e50);
+    border-radius: 3px;
+    transition: width 1s ease;
+}
+
+.about-skill-card:hover {
+    transform: translateY(-10px);
+}
+
+.about-skill-card h3 {
+    color: #3498db;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.about-skill-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-skill-card li {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.about-skill-card li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #3498db;
+}
+.about-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(to top, white, transparent);
+}
+
+/* Social Icons Section */
+.about-social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.about-social-icon {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.about-social-icon:hover {
+    color: #3498db;
+    transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-profile-container {
+        display: grid;
+    grid-template-columns: minmax(300px, 1fr) 2fr;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: -50px auto 0;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+    }
+
+    .about-profile-image {
+        width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .about-skills-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.heart {
+    color: red;
+}
+

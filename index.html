@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer> </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Rock+Salt&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+   
+    <nav id="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <img src="images/Logo.png" alt="Logo">
+            </a>
+            
+            
+            <!-- Hamburger button -->
+            <button class="hamburger-menu" aria-label="Toggle menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+    
+            <!-- Navigation items -->
+            <div class="nav-items">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Connect</a></li>
+                    <li class="nav-item">
+                        <a href="https://www.buymeacoffee.com/joshuahamilton" class="buy-coffee-btn">
+                            <img src="https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20book&emoji=📚️&slug=joshuahamilton&button_colour=5F7FFF&font_colour=ffffff&font_family=Lato&outline_colour=000000&coffee_colour=FFDD00" alt="Buy me a book">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="intro">
+        <h2 class="section-title1">whoami</h2>
+        <div class="typing-container">
+            <span class="typed-text"></span> <!-- This is where the typing effect happens -->
+        </div>
+
+        <p class="section-description">
+            I’m a psychologist with a solid foundation in computer science, passionate about humanizing complex computational systems. My work explores the fascinating overlap between the computational processes of a computer and the cognitive functions of the human mind. Outside of my professional pursuits, I’m an avid adventurer and a hobbyist photographer, always seeking new perspectives both in life and through my lens!
+        </p>
+    </section>
+
+    <section id="career-goals">
+        <h2 class="section-title">Actively pursuing a full-time or part-time opportunity</h2>
+        <p class="section-description">
+            That is specializing in Human Factors Engineering, UX/UI Design, Cognitive Systems Engineering, Health Systems Engineering, Ergonomics, Human Performance Analysis, and Data Science (Human/Social Data Insights).
+        </p>
+    </section>
+    
+    <section id="about-me">
+        <h2 class="section-title">Meet Joshua</h2>
+        <img src="images/me.png" alt="My Avatar" class="avatar-image">
+        <p class="section-description">
+            Hey there, 👋 thanks for visiting my page! I'm Joshua, and I’m passionate about solving problems, connecting with people, and creating human-centered software and hardware. My journey started in Bozeman, Montana, where I earned a Bachelor of Science in Psychology with a focus on human cognition, and minored in Computer Science at Montana State University. I've always been fascinated by both people and computers, eager to understand how they work and where they intersect. These days, I’m driven by curiosity and constantly look for ways to improve myself—whether it’s coding in a new programming language or tackling a software design challenge. I enjoy the process of learning and growing every step of the way.
+        </p>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Recent Projects</h2>
+        <!-- Project 1 -->
+        <div class="project">
+            <h3 class="project-title">Reducing Human Error And Enhancing Security in EHR Systems</h3>
+            <p class="project-summary">
+                <strong>Problem:</strong> Healthcare industry faces a significant problem of data security breaches and cyberattacks, primarily due to human error and systemic vulnerabilities. EHR software, often complex and poorly designed, contributes to accidental errors and oversights. 
+            </p>
+            <p class="project-summary">
+                <strong>Tools Used:</strong> Adobe Express, Adobe XD, Miro, Excel, Python</p>
+            <p class="project-summary">
+                <strong>Research Phase:</strong> Conducted stakeholder interviews, analyzed user workflows, and iterated prototypes based on user feedback.
+            </p>
+            <a class="project-link" href="projects.html">Read More</a>
+        </div>
+    
+        <!-- Project 2 -->
+        <div class="project">
+            <h3 class="project-title"> Impact of Algorithmic Content Delivery on Working Memory Capacity and Executive Attention. 
+            </h3>
+            <p class="project-summary">
+                <strong>Problem:</strong> 
+                Study proposes the investigation of the potential negative impacts of social media algorithms on users' cognitive functions. Specifically, we will examine how features like content ranking, recommendations, and infinite scrolling may overload cognitive resources, leading to diminished working memory, impaired attention, and increased cognitive load.
+            </p>
+            <p class="project-summary">
+                <strong>Tools Used:</strong> Python, pandas, numpy, scipy, statsmodels, NASA TLX
+            </p>
+            <p class="project-summary">
+                <strong>Research Phase:</strong> Performed user research, developed wireframes, and tested features with a pilot group of users.
+            </p>
+            <a class="project-link" href="projects.html">Read More</a>
+        </div>
+
+          <!-- Project 3 -->
+          <div class="project">
+            <h3 class="project-title">Saucy: Personalized Recipe Recommendations with Interactive Machine Learning</h3>
+            <p class="project-summary">
+                <strong>Problem:</strong> Many individuals struggle to find quick, delicious, and reliable recipes, often wasting time and energy on unsuccessful culinary endeavors.
+            </p>
+            <p class="project-summary">
+                <strong>Tools Used:</strong> HTML, CSS, JavaScript, PHP, MySQL, JSON, OpenAI API, Composer, Symfony
+            </p>
+            <p class="project-summary">
+                <strong>Research Phase:</strong> Performed user research, developed wireframes, and tested features with a pilot group of users.
+            </p>
+            <a class="project-link" href="projects.html">Read More</a>
+        </div>
+    </section>
+
+    <section id="resume">
+        <a href="JH Resume 2024.pdf" download="Joshua_Resume" class="download-link">
+            <button>Take a Copy of My Resume </button>
+        </a>
+    </section>
+
+    <footer>
+        <div class="social-icons">
+    <a href="https://github.com/jhamilton18" target="_blank" class="icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <i class="fa fa-github" style="font-size:36px;color:white"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/joshua-hamilton-a52a02285/" target="_blank" class="icon">
+        <i class="fa fa-linkedin-square" style="font-size:36px; color: white;"></i>
+    </a>
+</div>
+<p>Copyright © Joshua Hamilton 2024 | Coded with <span class="heart">&#10084;</span></p>
+</footer>
+    
+</body>
+</html>

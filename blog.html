@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joshua Hamilton - Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Bebas+Neue&family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer> </script>
+</head>
+<body>
+    <nav id="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <img src="images/Logo.png" alt="Logo">
+            </a>
+            
+            <!-- Hamburger button -->
+            <button class="hamburger-menu" aria-label="Toggle menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+    
+            <!-- Navigation items -->
+            <div class="nav-items">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Connect</a></li>
+                    <li class="nav-item">
+                        <a href="https://www.buymeacoffee.com/joshuahamilton" class="buy-coffee-btn">
+                            <img src="https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20book&emoji=📚️&slug=joshuahamilton&button_colour=5F7FFF&font_colour=ffffff&font_family=Lato&outline_colour=000000&coffee_colour=FFDD00" alt="Buy me a book">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="blog-container">
+        <div class="blog-header">
+            <h1 class="section-title">Latest Blog Posts</h1>
+            <p class="section-description">Exploring tech, coding, and personal insights</p>
+        </div>
+
+        <div class="blog-post">
+            <h2 class="blog-post-title">Mastering React Hooks</h2>
+            <div class="blog-post-meta">Published on May 15, 2024 | 5 min read</div>
+            <p class="blog-post-excerpt">Dive deep into the world of React Hooks and learn how to simplify your component logic with useState, useEffect, and custom hooks...</p>
+            <a href="#" class="read-more">Read More →</a>
+        </div>
+
+        <div class="blog-post">
+            <h2 class="blog-post-title">The Future of Web Development</h2>
+            <div class="blog-post-meta">Published on April 22, 2024 | 7 min read</div>
+            <p class="blog-post-excerpt">An exploration of emerging technologies and trends that are reshaping the landscape of web development in 2024...</p>
+            <a href="#" class="read-more">Read More →</a>
+        </div>
+
+        <div class="blog-post">
+            <h2 class="blog-post-title">Optimizing Performance in Python</h2>
+            <div class="blog-post-meta">Published on March 10, 2024 | 6 min read</div>
+            <p class="blog-post-excerpt">Practical strategies and techniques to make your Python code faster and more efficient, with real-world examples...</p>
+            <a href="#" class="read-more">Read More →</a>
+        </div>
+
+        <div class="blog-post">
+            <h2 class="blog-post-title">Design Patterns in Modern JavaScript</h2>
+            <div class="blog-post-meta">Published on February 5, 2024 | 8 min read</div>
+            <p class="blog-post-excerpt">Understanding and implementing classic design patterns to write more maintainable and scalable JavaScript code...</p>
+            <a href="#" class="read-more">Read More →</a>
+        </div>
+
+        <div class="blog-post">
+            <h2 class="blog-post-title">Building Accessible Web Applications</h2>
+            <div class="blog-post-meta">Published on January 18, 2024 | 5 min read</div>
+            <p class="blog-post-excerpt">A comprehensive guide to creating inclusive web experiences that work for everyone, regardless of ability...</p>
+            <a href="#" class="read-more">Read More →</a>
+        </div>
+        
+        
+
+        <button id="load-more" class="cta-button">Load More Posts</button>
+    </div>
+
+    <footer>
+        <div class="social-icons">
+    <a href="https://github.com/jhamilton18" target="_blank" class="icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <i class="fa fa-github" style="font-size:36px;color:white"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/joshua-hamilton-a52a02285" target="_blank" class="icon">
+        <i class="fa fa-linkedin-square" style="font-size:36px; color: white;"></i>
+    </a>
+</div>
+<p>Copyright © Joshua Hamilton 2024 | Coded with <span class="heart">&#10084;</span></p>
+</footer>
+
+    <script>
+        // Array of additional blog posts to load
+        const additionalPosts = [
+            {
+                title: "Getting Started with TypeScript",
+                date: "December 15, 2023",
+                readTime: "6 min read",
+                excerpt: "A comprehensive guide to starting your journey with TypeScript and understanding its key benefits..."
+            },
+            {
+                title: "CSS Grid vs Flexbox",
+                date: "December 1, 2023",
+                readTime: "4 min read",
+                excerpt: "Understanding when to use CSS Grid versus Flexbox for modern web layouts with practical examples..."
+            },
+            {
+                title: "Introduction to Docker",
+                date: "November 20, 2023",
+                readTime: "7 min read",
+                excerpt: "Learn the basics of containerization and how to get started with Docker in your development workflow..."
+            },
+            {
+                title: "Modern JavaScript Features",
+                date: "November 5, 2023",
+                readTime: "5 min read",
+                excerpt: "Exploring the latest JavaScript features and how they can improve your code quality and productivity..."
+            }
+        ];
+
+        let currentPage = 1;
+        const postsPerPage = 2;
+
+        function createBlogPost(post) {
+            const blogPost = document.createElement('div');
+            blogPost.className = 'blog-post';
+            blogPost.style.opacity = '0';
+            
+            blogPost.innerHTML = `
+                <h2 class="blog-post-title">${post.title}</h2>
+                <div class="blog-post-meta">Published on ${post.date} | ${post.readTime}</div>
+                <p class="blog-post-excerpt">${post.excerpt}</p>
+                <a href="#" class="read-more">Read More →</a>
+            `;
+            
+            return blogPost;
+        }
+
+        function loadMorePosts() {
+            const startIndex = (currentPage - 1) * postsPerPage;
+            const endIndex = Math.min(startIndex + postsPerPage, additionalPosts.length);
+            const blogContainer = document.getElementById('blog-container');
+            const loadMoreButton = document.getElementById('load-more');
+            
+            // Get posts for current page
+            const postsToAdd = additionalPosts.slice(startIndex, endIndex);
+            
+            if (postsToAdd.length > 0) {
+                // Add each new post with animation
+                postsToAdd.forEach((post, index) => {
+                    const blogPost = createBlogPost(post);
+                    blogContainer.insertBefore(blogPost, loadMoreButton);
+                    
+                    // Trigger reflow for animation
+                    void blogPost.offsetWidth;
+                    
+                    // Add fade in animation
+                    blogPost.style.transition = 'opacity 0.5s ease-out, transform 0.5s ease-out';
+                    blogPost.style.transform = 'translateY(20px)';
+                    
+                    setTimeout(() => {
+                        blogPost.style.opacity = '1';
+                        blogPost.style.transform = 'translateY(0)';
+                    }, index * 200);
+                });
+                
+                currentPage++;
+                
+                // Hide button if no more posts
+                if (endIndex >= additionalPosts.length) {
+                    loadMoreButton.style.display = 'none';
+                }
+            } else {
+                loadMoreButton.style.display = 'none';
+            }
+        }
+
+        // Add event listener when document is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            const loadMoreButton = document.getElementById('load-more');
+            if (loadMoreButton) {
+                loadMoreButton.addEventListener('click', loadMorePosts);
+            }
+        });
+    </script>
+</body>
+</html>

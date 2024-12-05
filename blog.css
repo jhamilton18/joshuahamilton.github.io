@@ -1,0 +1,116 @@
+/* Blog-specific styles */
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+#blog-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.blog-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.blog-post {
+    background-color: #ffffff;
+    margin-bottom: 1.5rem;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-out;
+}
+
+.blog-post:hover {
+    transform: scale(1.02);
+}
+
+.blog-post-title {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.blog-post-title:hover {
+    color: #3498db;
+}
+
+.blog-post-meta {
+    color: #777;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.blog-post-excerpt {
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.read-more {
+    display: inline-block;
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.read-more:hover {
+    color: #2c3e50;
+    transform: translateX(5px);
+}
+
+#load-more {
+    display: block;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #blog-container {
+        padding: 1rem;
+    }
+
+    .blog-post {
+        padding: 1.5rem;
+    }
+}
+
+/* Inherit some styles from main stylesheet */
+@import url('style.css');
+
+/* Load more button styles */
+#load-more {
+    display: block;
+    margin: 2rem auto;
+    padding: 12px 24px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#load-more:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Blog post animation */
+.blog-post {
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
